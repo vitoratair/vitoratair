@@ -65,7 +65,7 @@ a:hover {
 }
 
 .btn-main {
-  background: #f98253 repeat scroll 0 0;
+  background: #72c02c repeat scroll 0 0;
   border: none;
   font-weight: 400;
   border-radius: 0px;
@@ -78,7 +78,7 @@ a:hover {
 }
 
 .btn-main:hover {
-	background: #fd966d repeat scroll 0 0;
+	background: #5fb611 repeat scroll 0 0;
 	color: #FFFFFF;
 	text-decoration: none;
 	transition: all 0.35s ease-in-out;
@@ -179,6 +179,10 @@ iframe {
 
 .white {
   color: #ffffff;
+}
+
+.green {
+  color: #72c02c;
 }
   
 
