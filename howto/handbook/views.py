@@ -18,7 +18,14 @@ def pythonStart(request):
 
 def pythonFirst(request):
     """ 
-    	Esse método tem por objetivo exibir o template da página "Primeiro programa" sobre python
+        Esse método tem por objetivo exibir o template da página "Primeiro programa" sobre python
     """
 
-    return render(request, 'python/first.html')     
+    return render(request, 'python/first.html') 
+
+def pythonData(request):
+    """ 
+        Esse método tem por objetivo exibir o template da página "Tipos de dados" sobre python
+    """
+
+    return render(request, 'python/data.html')         
