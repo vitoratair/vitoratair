@@ -73,6 +73,21 @@ class CoreTest(TestCase):
         response = self.client.get('/pythonOO/')
         self.assertTemplateUsed(response, 'python/oo_1.html')                
 
+    def test_get_pythonFirst(self):
+        """
+        GET / must return  status code 200
+        """
+
+        response = self.client.get('/pythonFirst/')
+        self.assertEqual(200, response.status_code)
+
+    def test_template_pythonFirst(self):
+        """
+        Template / must return  'python/first.html'
+        """
+
+        response = self.client.get('/pythonFirst/')
+        self.assertTemplateUsed(response, 'python/first.html')  
 
 
 
