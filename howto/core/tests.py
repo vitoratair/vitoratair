@@ -24,3 +24,19 @@ class CoreTest(TestCase):
 
         response = self.client.get('/')
         self.assertTemplateUsed(response, 'index.html')
+
+    def test_get_bike(self):
+        """
+        GET / must return  status code 200
+        """
+
+        response = self.client.get('/bike/')
+        self.assertEqual(200, response.status_code)
+
+    def test_template_bike(self):
+        """
+        Template / must return  'bike.html'
+        """
+
+        response = self.client.get('/bike/')
+        self.assertTemplateUsed(response, 'bike.html')        
