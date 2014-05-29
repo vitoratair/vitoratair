@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.test import TestCase
+from django.core.urlresolvers import reverse as r
 
 # Create your tests here.
 class CoreTest(TestCase):
@@ -14,81 +15,62 @@ class CoreTest(TestCase):
         GET / must return  status code 200
         """
 
-        response = self.client.get('/python/')
+        response = self.client.get(r('handbook:python'))
         self.assertEqual(200, response.status_code)
 
     def test_template_python(self):
         """
-        Template / must return  'python/index.html'
+        Template / must return the correct template used to python page
         """
 
-        response = self.client.get('/python/')
+        response = self.client.get(r('handbook:python'))
         self.assertTemplateUsed(response, 'python/index.html')
 
-    def test_get_pythonStart(self):
+    def test_template_python_page1(self):
+        """
+        Template / must return the correct template used to python page
+        """
+
+        response = self.client.get(r('handbook:python', args=['1']))
+        self.assertTemplateUsed(response, 'python/start.html')
+
+    def test_template_python_page2(self):
+        """
+        Template / must return the correct template used to python page
+        """
+
+        response = self.client.get(r('handbook:python', args=['2']))
+        self.assertTemplateUsed(response, 'python/first.html')
+
+    def test_template_python_page3(self):
+        """
+        Template / must return the correct template used to python page
+        """
+
+        response = self.client.get(r('handbook:python', args=['3']))
+        self.assertTemplateUsed(response, 'python/data.html')
+
+    def test_template_python_page4(self):
+        """
+        Template / must return the correct template used to python page
+        """
+
+        response = self.client.get(r('handbook:python', args=['4']))
+        self.assertTemplateUsed(response, 'python/oo_1.html')                        
+
+    def test_get_linux(self):
         """
         GET / must return  status code 200
         """
 
-        response = self.client.get('/pythonStart/')
+        response = self.client.get(r('handbook:linux'))
         self.assertEqual(200, response.status_code)
 
-    def test_template_pythonStart(self):
+    def test_template_linux(self):
         """
-        Template / must return  'python/index.html'
-        """
-
-        response = self.client.get('/pythonStart/')
-        self.assertTemplateUsed(response, 'python/start.html') 
-
-    def test_get_pythonData(self):
-        """
-        GET / must return  status code 200
+        Template / must return the correct template used to linux page
         """
 
-        response = self.client.get('/pythonData/')
-        self.assertEqual(200, response.status_code)
-
-    def test_template_pythonData(self):
-        """
-        Template / must return  'python/data.html'
-        """
-
-        response = self.client.get('/pythonData/')
-        self.assertTemplateUsed(response, 'python/data.html')                
-
-    def test_get_pythonOO(self):
-        """
-        GET / must return  status code 200
-        """
-
-        response = self.client.get('/pythonOO/')
-        self.assertEqual(200, response.status_code)
-
-    def test_template_pythonOO(self):
-        """
-        Template / must return  'python/oo_1.html'
-        """
-
-        response = self.client.get('/pythonOO/')
-        self.assertTemplateUsed(response, 'python/oo_1.html')                
-
-    def test_get_pythonFirst(self):
-        """
-        GET / must return  status code 200
-        """
-
-        response = self.client.get('/pythonFirst/')
-        self.assertEqual(200, response.status_code)
-
-    def test_template_pythonFirst(self):
-        """
-        Template / must return  'python/first.html'
-        """
-
-        response = self.client.get('/pythonFirst/')
-        self.assertTemplateUsed(response, 'python/first.html')  
-
-
-
+        response = self.client.get(r('handbook:linux'))
+        self.assertTemplateUsed(response, 'linux/index.html') 
 
