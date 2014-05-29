@@ -46,4 +46,8 @@ def linux(request, url = None):
         return render(request, 'linux/branches.html') 
 
     elif url == '6':
-        return render(request, 'linux/git-basic.html')                        
+        return render(request, 'linux/git-basic.html')   
+
+    elif url == '7':
+        return render(request, 'linux/git-intermediate.html')                               
+
