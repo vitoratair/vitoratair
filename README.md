@@ -12,7 +12,7 @@ This Web site was created to learning some things about python and your framewor
 
 ###How about the content?
 
-I going to bring some things relevant to learning software development and linux. It will bringing things where learned at work, at school or more likely in my room after 11 PM
+I going to bring some relevant things to learning software development and linux. It will bringing things where learned at work, at school or more likely in my room after 11PM
 
 ###How about refactoring?
 
@@ -21,5 +21,5 @@ I don't know many things about python or django mainly, it was the main reason t
 
 ###How about the bike?
 
-It is important and everyone should try ride a bicycle, so, I will eventually make a post about some rides that I did.
+It is important and everyone should try ride a bicycle :), so, I will eventually make a post about some rides that I did.
 

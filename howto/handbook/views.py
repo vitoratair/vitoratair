@@ -34,4 +34,7 @@ def linux(request, url = None):
         return render(request, 'linux/linux.html')
     
     elif url == '2':
-        return render(request, 'linux/makefile.html')        
+        return render(request, 'linux/makefile.html') 
+    
+    elif url == '3':
+        return render(request, 'linux/git.html')               
