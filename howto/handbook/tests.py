@@ -74,3 +74,45 @@ class CoreTest(TestCase):
         response = self.client.get(r('handbook:linux'))
         self.assertTemplateUsed(response, 'linux/index.html') 
 
+    def test_template_linux_page1(self):
+        """
+        Template / must return the correct template used to linux page
+        """
+
+        response = self.client.get(r('handbook:linux', args=['1']))
+        self.assertTemplateUsed(response, 'linux/linux.html') 
+
+    def test_template_linux_page2(self):
+        """
+        Template / must return the correct template used to linux page
+        """
+
+        response = self.client.get(r('handbook:linux', args=['2']))
+        self.assertTemplateUsed(response, 'linux/makefile.html') 
+
+    def test_template_linux_page3(self):
+        """
+        Template / must return the correct template used to linux page
+        """
+
+        response = self.client.get(r('handbook:linux', args=['3']))
+        self.assertTemplateUsed(response, 'linux/git.html') 
+
+    def test_template_linux_page4(self):
+        """
+        Template / must return the correct template used to linux page
+        """
+
+        response = self.client.get(r('handbook:linux', args=['4']))
+        self.assertTemplateUsed(response, 'linux/workflow.html') 
+
+    def test_template_linux_page5(self):
+        """
+        Template / must return the correct template used to linux page
+        """
+
+        response = self.client.get(r('handbook:linux', args=['5']))
+        self.assertTemplateUsed(response, 'linux/branches.html') 
+
+
+
