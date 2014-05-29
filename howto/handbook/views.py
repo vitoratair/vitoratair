@@ -40,4 +40,7 @@ def linux(request, url = None):
         return render(request, 'linux/git.html')               
 
     elif url == '4':
-        return render(request, 'linux/workflow.html')        
+        return render(request, 'linux/workflow.html') 
+
+    elif url == '5':
+        return render(request, 'linux/branches.html')                
