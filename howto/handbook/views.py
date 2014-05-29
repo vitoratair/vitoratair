@@ -50,4 +50,6 @@ def linux(request, url = None):
 
     elif url == '7':
         return render(request, 'linux/git-intermediate.html')                               
-
+    
+    elif url == '8':
+        return render(request, 'linux/git-advanced.html')  
