@@ -22,9 +22,16 @@ def python(request, url = None):
         return render(request, 'python/oo_1.html')        
 
 
-def linux(request):
+def linux(request, url = None):
     """ 
         Esse método tem por objetivo exibir o template da página sobre linux
     """
 
-    return render(request, 'linux/index.html')     
+    if url is None:
+        return render(request, 'linux/index.html')
+
+    elif url == '1':
+        return render(request, 'linux/linux.html')
+    
+    elif url == '2':
+        return render(request, 'linux/makefile.html')        
