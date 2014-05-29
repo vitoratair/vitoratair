@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="message">
+  <div class="container">
+    <div class="row">      
+      <div class="col-md-12 text-center">
+        
+        <div class="col-md-8">
+          <h4 class="gray">            
+            How To para iniciantes em <b>Linux</b>, serviços e comandos para <b>monitoramento</b> e <b>gerenciamento</b> do <b>SO</b> e servidores externos.
+          </h4>          
+        </div>        
+
+        <div class="col-md-4">
+          <img src="{{ STATIC_URL }}img/linux.png" width="50%" alt="">  
+        </div>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+    <div class="container">      
+      <div class="row margin-50">
+        <div class="col-md-4">
+          <h3 align="center"><span class="green">O que é linux</span></h3>
+          <p class="gray">
+            A maioria dos usuários <b>GNU/Linux</b> não sabem, ou falam que utilizam o sistema operacional <b>Linux</b>. Eu mesmo apesar de utilizar o <b>Fedora</b> a um bom tempo, sempre falei que utilizava o SO Linux e não GNU/Linux, até ter a oportunidade de assistir uma palestra do <b>Richard Stallman</b> no FISL 2013...
+          </p>
+          <br><br>
+          <p align="center">
+            <a class="btn-main" href="">Matéria completa</a>
+          </p>
+        </div>
+        
+        <div class="col-md-4">
+          <h3 align="center"><span class="green">Makefile</span></h3>
+          <p class="gray">
+            Makefile é um arquivo texto sem extensão contendo instruções para compilação de um programa ou biblioteca, o utilitário <b>make</b> interpreta esse arquivo tornando a compilação de um software grande, com vários arquivos fontes, bibliotecas e dependências de terceiros simples, rápida e eficiente.
+          </p>
+          <br><br>
+          <p align="center">
+            <a class="btn-main" href="">Matéria completa</a>
+          </p>          
+        </div>
+        
+        <div class="col-md-4">
+          <h3 align="center"><span class="green">GIT</span></h3>
+          <p class="gray">
+            É um sistema de controle de versão distribuido open source desenhado para velocidade e eficiência. Criado por Linux Torvalds para o desenvolvimento do kernel linux.
+          </p>
+          <br><br><br><br><br>
+          <p align="center">
+            <a class="btn-main" href="">Matéria completa</a>
+          </p> 
+        </div> 
+      </div>
+      
+
+      <div class="row margin-50">        
+
+
+      </div>
+      
+    </div>
+  </section>
+
+{% endblock content %}

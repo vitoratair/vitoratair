@@ -36,3 +36,10 @@ def pythonOO(request):
     """
 
     return render(request, 'python/oo_1.html')             
+
+def linux(request):
+    """ 
+        Esse método tem por objetivo exibir o template da página sobre linux
+    """
+
+    return render(request, 'linux/index.html')     
