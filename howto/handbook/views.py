@@ -1,41 +1,26 @@
 # coding: utf-8
 from django.shortcuts import render
 
-
-def python(request):
+def python(request, url = None):
     """ 
     	Esse método tem por objetivo exibir o template da página sobre python
     """
 
-    return render(request, 'python/index.html')	
+    if url is None:    
+        return render(request, 'python/index.html')	
 
-def pythonStart(request):
-    """ 
-    	Esse método tem por objetivo exibir o template da página "O começo de tudo" sobre python
-    """
+    elif url == '1':
+        return render(request, 'python/start.html')         
 
-    return render(request, 'python/start.html')    
+    elif url == '2':
+        return render(request, 'python/first.html') 
+ 
+    elif url == '3':
+        return render(request, 'python/data.html')
+    
+    elif url == '4':
+        return render(request, 'python/oo_1.html')        
 
-def pythonFirst(request):
-    """ 
-        Esse método tem por objetivo exibir o template da página "Primeiro programa" sobre python
-    """
-
-    return render(request, 'python/first.html') 
-
-def pythonData(request):
-    """ 
-        Esse método tem por objetivo exibir o template da página "Tipos de dados" sobre python
-    """
-
-    return render(request, 'python/data.html')  
-
-def pythonOO(request):
-    """ 
-        Esse método tem por objetivo exibir o template da página "Orientação a objetos" sobre python
-    """
-
-    return render(request, 'python/oo_1.html')             
 
 def linux(request):
     """ 
