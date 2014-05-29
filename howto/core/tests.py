@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.test import TestCase
+from django.core.urlresolvers import reverse as r
 
 # Create your tests here.
 class CoreTest(TestCase):
@@ -14,7 +15,7 @@ class CoreTest(TestCase):
         GET / must return  status code 200
         """
 
-        response = self.client.get('/')
+        response = self.client.get(r('core:home'))
         self.assertEqual(200, response.status_code)
 
     def test_template_home(self):
@@ -22,7 +23,7 @@ class CoreTest(TestCase):
         Template / must return  'index.html'
         """
 
-        response = self.client.get('/')
+        response = self.client.get(r('core:home'))
         self.assertTemplateUsed(response, 'index.html')
 
     def test_get_bike(self):
@@ -30,7 +31,7 @@ class CoreTest(TestCase):
         GET / must return  status code 200
         """
 
-        response = self.client.get('/bike/')
+        response = self.client.get(r('core:bike'))
         self.assertEqual(200, response.status_code)
 
     def test_template_bike(self):
@@ -38,5 +39,5 @@ class CoreTest(TestCase):
         Template / must return  'bike.html'
         """
 
-        response = self.client.get('/bike/')
+        response = self.client.get(r('core:bike'))
         self.assertTemplateUsed(response, 'bike.html')        
