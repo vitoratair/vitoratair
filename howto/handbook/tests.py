@@ -114,5 +114,12 @@ class CoreTest(TestCase):
         response = self.client.get(r('handbook:linux', args=['5']))
         self.assertTemplateUsed(response, 'linux/branches.html') 
 
+    def test_template_linux_page6(self):
+        """
+        Template / must return the correct template used to linux page
+        """
+
+        response = self.client.get(r('handbook:linux', args=['6']))
+        self.assertTemplateUsed(response, 'linux/git-basic.html')         
 
 
