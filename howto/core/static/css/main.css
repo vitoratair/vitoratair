@@ -927,6 +927,7 @@ hr {
 ul.social-icons {
 	list-style: none;
 	margin-left: 0px;
+  margin-bottom: -20px;
 }
 
 ul.social-icons li {
