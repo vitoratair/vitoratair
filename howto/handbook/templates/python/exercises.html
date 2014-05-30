@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section id="content">
+	<div class="container"> 
+
+        <div class="row margin-30">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h1 class="dark-gray">Python <small> exercícios resolvidos</small></h1>
+          </div>
+        </div>
+
+		<div class="row margin-50">
+
+			<div class="panel-group" id="accordion">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title gray">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+				          Exibir na tela um vetor passado por parâmetro a uma função
+				        </a>
+				      </h4>
+				    </div>
+			    
+				    <div id="collapseOne" class="panel-collapse collapse off">
+				      	<div class="panel-body">
+<pre class="lang-python prettyprint">
+# coding: utf-8
+
+def showList(lista):
+	for element in lista:
+		print element
+
+if __name__ == '__main__':
+	lista = ['element 1', 'element 2', 'element 3', 'element 4']
+	showList(lista)
+</pre>
+				      	</div>
+				    </div>
+			  	</div>
+			<br>
+			<!-- Exercício 2 -->
+			<div class="panel-group" id="accordion">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title gray">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+				          Exibir na tela um vetor passado por parâmetro a uma função na ordem inversa
+				        </a>
+				      </h4>
+				    </div>
+			    
+				    <div id="collapseTwo" class="panel-collapse collapse off">
+				      	<div class="panel-body">
+<pre class="lang-python prettyprint">
+# coding: utf-8
+
+def showInverseList(lista):
+	newList = []
+
+	for indice in range(0, len(lista)):
+		newList.insert(0, lista[indice])
+	
+	print newList
+
+if __name__ == '__main__':
+	lista = [10,9,8,7]
+	showInverseList(lista)
+</pre>
+						<br>
+						<h4 class="gray">Refatorando</h4>
+						<br>
+
+<pre class="lang-python prettyprint">
+# coding: utf-8
+
+def showInverseList(lista):
+	
+	print lista[::-1]
+
+	# or
+
+	for element in reversed(lista):
+		print element
+
+	# or 
+
+	...
+
+if __name__ == '__main__':
+	lista = [10,9,8,7]
+	showInverseList(lista)
+</pre>
+				      	</div>
+				    </div>
+			  	</div>
+
+			<br>
+			<!-- Exercício 3 -->
+			<div class="panel-group" id="accordion">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title gray">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+				          Montar uma lista de três números com valores que o usuário passa pelo terminal
+				        </a>
+				      </h4>
+				    </div>
+			    
+				    <div id="collapseThree" class="panel-collapse collapse off">
+				      	<div class="panel-body">
+<pre class="lang-python prettyprint">
+def listByUser():
+
+	userList = []
+
+	print 'Insira três números'
+
+	while len(userList) < 3:
+		
+		element = raw_input('Entre com um número: ')
+		
+		if element.isdigit():
+			userList.append(element)
+		
+		else:
+			print 'Elemento não pode ser inserido'
+			element = raw_input('Entre com um número: ')
+
+	print userList
+
+if __name__ == '__main__':
+	listByUser()	
+</pre>
+				      	</div>
+				    </div>
+			  	</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+{% endblock content %}

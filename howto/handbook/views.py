@@ -21,6 +21,8 @@ def python(request, url = None):
     elif url == '4':
         return render(request, 'python/tdd.html')        
 
+    elif url == '5':
+        return render(request, 'python/exercises.html')
 
 def linux(request, url = None):
     """ 
