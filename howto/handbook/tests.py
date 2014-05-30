@@ -56,7 +56,7 @@ class CoreTest(TestCase):
         """
 
         response = self.client.get(r('handbook:python', args=['4']))
-        self.assertTemplateUsed(response, 'python/oo_1.html')                        
+        self.assertTemplateUsed(response, 'python/tdd.html')                        
 
     def test_get_linux(self):
         """
