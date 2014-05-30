@@ -2,4 +2,61 @@
 
 {% block content %}
 
+    <section id="content">
+      <div class="container">
+        
+        <div class="row margin-30">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h1 class="dark-gray">Python <small>Test Driven Development</small></h1>
+          </div>
+        </div>
+        
+        <div class="row margin-50">
+			<div class="col-md-1"></div>	            
+			<div class="col-md-12">	            
+	            
+				<p>
+					TDD ou desenvolvimento orientado a testes é uma técnica de desenvolvimento de software que visa a qualidade do software de forma simples objetiva e eficaz. Os conceitos do TDD vieram da mente de <b>Kent Beck</b> e tem conceitos do <b>Extreme Programming</b>.
+				</p>
+				<br>
+				<h2 class="gray">Ciclos de desenvolvimento</h2>
+				
+				<div class="col-md-12">
+					<div class="col-md-8">
+						<br>		
+						<p><i>Criar um teste e vê-lo falhar</i></p>
+						<p><i>Escrever um código mínimo porém eficiente para fazer o teste passar</i></p>
+						<p><i>Refatorar o código afim de remover duplicidades,legibilidade e performance</i></p>
+
+					</div>
+
+					<div class="col-md-4">
+						<img src="{{ STATIC_URL }}img/tdd.png" width="80%" alt=""/>
+					</div>
+				</div>
+
+				<h2 class="gray">Vantagens de usar TDD</h2>	
+				<br>
+				<p>
+					<b>Qualidade do código</b> é sem dúvida um dos principais ensinamentos do TDD, apesar de se ter um curva de aprendizado significativa, com a prática será criada uma cultura entre os programadores, uma vez participado de um projeto orientado a testes, um ciclo será criado e ninguém mais ira programar um função sem ter escrito primeiro o seu teste.
+					<br>
+					<br>
+					<b>Confiança na equipe</b> é um outro ponto chave do TDD, uma vez que um novo integrante entre na equipe, ou mesmo um desenvolvedor que necessite realizar uma manutenção em um software que não foi ele quem criou, um software desenvolvido orientado a testes trará mais segurança para o sistema e confiança para o desenvolvedor alterar ou refatorar funções sem medo de as mesmas apresetarem bugs posteriormente.
+				</p>
+				<br>
+				<h2 class="gray">Exemplos</h2>	
+				<br>
+
+				<p>
+					Para exemplificar o uso do TDD será utilizado a biblioteca <b>unittest</b> do python, sendo que inúmeras outras estão presente no mercado.
+				</p>
+
+
+
+			</div>
+			<div class="col-md-1"></div>
+        </div>        
+      </div>
+    </section> 
+
 {% endblock content %}
